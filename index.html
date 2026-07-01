@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <title>Undangan Turun Tanah - Zehaan Raffasya Zulda</title>
+    <meta name="description" content="Turun Tanah putra tercinta kami, Zehaan Raffasya Zulda. Selasa, 07 Juli 2026.">
+    <meta name="theme-color" content="#F8F4EE">
+    <meta property="og:title" content="Undangan Turun Tanah - Zehaan">
+    <meta property="og:description" content="Selasa, 07 Juli 2026 - Dusun Bawah, Manyak Payed, Aceh Tamiang.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Ikon Premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 0. LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="bear-bounce"><i class="fa-solid fa-baby text-primary"></i></div>
+            <div class="loader-text font-cormorant">...</div>
+        </div>
+    </div>
+
+    <!-- AUDIO ELEMENT -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
+    <!-- FLOATING ELEMENTS CONTAINER -->
+    <div class="floating-decorations">
+        <div class="float-cloud c1"><i class="fa-solid fa-cloud"></i></div>
+        <div class="float-cloud c2"><i class="fa-solid fa-cloud"></i></div>
+        <div class="float-balloon b1"><i class="fa-solid fa-parachute-box"></i></div>
+        <div class="float-balloon b2"><i class="fa-solid fa-parachute-box"></i></div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast font-cormorant">Nomor rekening berhasil disalin!</div>
+
+    <!-- 1. COVER / SPLASH SCREEN (Hanya Desain Card Berubah Menjadi Arch Kubah Cokelat Muda Soft) -->
+    <div id="cover-overlay">
+        
+        <!-- Bingkai Lengkung Kubah Premium (Arch Card) Murni CSS -->
+        <div class="premium-arch-card-cover">
+            
+            <!-- PURE CSS ART: BERUANG & BALON ATAS -->
+            <div class="css-illustration-top">
+                <div class="css-balloon-group">
+                    <div class="css-b-balloon cb1"></div>
+                    <div class="css-b-balloon cb2"></div>
+                    <div class="css-b-balloon cb3"></div>
+                    <div class="css-b-balloon cb4"></div>
+                    <div class="css-b-balloon cb5"></div>
+                </div>
+                <div class="css-bear">
+                    <div class="bear-ear left"></div>
+                    <div class="bear-ear right"></div>
+                    <div class="bear-head">
+                        <div class="bear-eye left"></div>
+                        <div class="bear-eye right"></div>
+                        <div class="bear-muzzle">
+                            <div class="bear-nose"></div>
+                        </div>
+                    </div>
+                    <div class="bear-body"></div>
+                </div>
+            </div>
+
+            <!-- ISI KONTEN TEKS DAN DATA ASLI TETAP KODE AWAL -->
+            <div class="cover-content-arch">
+                <p class="cover-subtitle">Tasyakuran Aqiqah</p>
+                <h1 class="baby-name-title font-playfair">Zehaan Raffasya Zulda</h1>
+                <h2 class="event-tag font-cormorant">Undangan Turun Tanah</h2>
+                <p class="guest-spec">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <div class="guest-name font-playfair" id="guest-target">Tamu Undangan</div>
+                
+                <button id="btn-open-invite" class="ripple-btn">
+                    <span><i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> Buka Undangan</span>
+                </button>
+            </div>
+
+            <!-- PURE CSS ART: BALON UDARA POJOK BAWAH -->
+            <div class="css-hot-air left-corner">
+                <div class="balloon-sphere"></div>
+                <div class="basket-box"></div>
+            </div>
+            <div class="css-hot-air right-corner">
+                <div class="balloon-sphere"></div>
+                <div class="basket-box"></div>
+            </div>
+
+        </div> <!-- /premium-arch-card-cover -->
+
+    </div>
+
+    <!-- MAIN APP WRAPPER -->
+    <div id="main-content" class="hide-content">
+
+        <!-- 2. HERO SECTION -->
+        <section class="section hero-sec text-center">
+            <div class="scroll-reveal fade-up">
+                <div class="arabic-text font-amiri">ِبسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيم</div>
+                <p class="opening-p text-center">Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara syukuran turun tanah anak kami tercinta:</p>
+                <div class="bear-divider"><i class="fa-solid fa-feather-pointed"></i></div>
+                <h1 class="main-baby-name font-playfair">Zehaan Raffasya Zulda</h1>
+                <p class="event-title-badge font-cormorant">Tasyakuran Aqiqah</p>
+            </div>
+        </section>
+
+        <!-- 3. PROFIL BAYI -->
+        <section class="section profile-sec">
+            <div class="container">
+                <div class="premium-card scroll-reveal fade-up">
+                    <div class="card-icon"><i class="fa-solid fa-baby text-primary"></i></div>
+                    <h2 class="section-title font-cormorant text-center">Profil Buah Hati</h2>
+                    <div class="profile-details text-center">
+                        <h3 class="font-playfair text-primary">Zehaan Raffasya Zulda</h3>
+                        <p class="birth-date font-cormorant"><i class="fa-regular fa-calendar-days" style="margin-right: 6px;"></i> Lahir: 09 Mei 2026</p>
+                        <div class="parents-info">
+                            <p class="caption-text"><strong>Putra Tercinta dari:</strong></p>
+                            <p class="parent-name font-playfair">Ayah: Zulian Syahputra, S.H., M.H.</p>
+                            <p class="parent-name font-playfair">Ibu: Nanda Rizki Pradana, S.Gz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. COUNTDOWN -->
+        <section class="section countdown-sec text-center">
+            <div class="container">
+                <h2 class="section-title font-cormorant scroll-reveal fade-up text-center">Menuju Hari Bahagia</h2>
+                <div id="countdown-wrapper" class="scroll-reveal fade-up">
+                    <div class="countdown-card"><span id="days" class="font-playfair">00</span><p class="font-cormorant">Hari</p></div>
+                    <div class="countdown-card"><span id="hours" class="font-playfair">00</span><p class="font-cormorant">Jam</p></div>
+                    <div class="countdown-card"><span id="minutes" class="font-playfair">00</span><p class="font-cormorant">Menit</p></div>
+                    <div class="countdown-card"><span id="seconds" class="font-playfair">00</span><p class="font-cormorant">Detik</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DETAIL ACARA -->
+        <section class="section schedule-sec">
+            <div class="container">
+                <div class="premium-card scroll-reveal fade-up">
+                    <div class="card-icon"><i class="fa-solid fa-map-location-dot text-primary"></i></div>
+                    <h2 class="section-title font-cormorant text-center">Waktu & Tempat Acara</h2>
+                    
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <span class="sc-icon"><i class="fa-regular fa-calendar-days"></i></span>
+                            <h4 class="font-playfair">Hari & Tanggal</h4>
+                            <p class="font-cormorant">Selasa, 07 Juli 2026</p>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="sc-icon"><i class="fa-regular fa-clock"></i></span>
+                            <h4 class="font-playfair">Pukul Waktu</h4>
+                            <p class="font-cormorant">10.00 WIB s/d Selesai</p>
+                        </div>
+                        <div class="schedule-item full-width">
+                            <span class="sc-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <h4 class="font-playfair">Lokasi Tempat</h4>
+                            <p class="font-cormorant">Dusun Bawah, Desa Buket Panyang Dua, Kecamatan Manyak Payed, Kabupaten Aceh Tamiang</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center" style="margin-top: 30px;">
+                        <a href="https://maps.app.goo.gl/HkStSVqJNW4AgMfK9?g_st=iw" target="_blank" class="btn-primary ripple-btn">
+                            <span><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> Lihat Lokasi Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. GALERI SLIDER -->
+        <section class="section gallery-sec">
+            <div class="container">
+                <h2 class="section-title font-cormorant text-center scroll-reveal fade-up">Galeri Foto Ceria</h2>
+                <div class="slider-viewport scroll-reveal fade-up">
+                    <div class="slider-track" id="slider-track">
+                        
+                        <!-- Ganti Jalur src sesuai dengan nama file foto yang Anda upload -->
+                        <div class="slide-item"><img src="assets/pictures/1.jpeg" alt="Foto Zehaan 1" class="gallery-img"></div>
+                        <div class="slide-item"><img src="assets/pictures/2.jpeg" alt="Foto Zehaan 2" class="gallery-img"></div>
+                        <div class="slide-item"><img src="assets/pictures/3.jpeg" alt="Foto Zehaan 3" class="gallery-img"></div>
+                        <div class="slide-item"><img src="assets/pictures/4.jpeg" alt="Foto Zehaan 4" class="gallery-img"></div>
+                        <div class="slide-item"><img src="assets/pictures/5.jpeg" alt="Foto Zehaan 5" class="gallery-img"></div>
+                        <div class="slide-item"><img src="assets/pictures/6.jpeg" alt="Foto Zehaan 6" class="gallery-img"></div>
+                    
+                    </div>
+                    <button class="slide-nav prev" id="slide-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slide-nav next" id="slide-next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+      
+        <!-- 7. DOA ISLAMI -->
+        <section class="section prayer-sec text-center">
+            <div class="container">
+                <div class="premium-card scroll-reveal fade-up card-glass">
+                    <div class="arabic-text font-amiri" style="font-size: 1.8rem; line-height: 2.8rem; margin-bottom: 24px;">
+                        بَارَكَ اللهُ لَكَ فِي المَوْهُوبِ لَكَ، وَشَكَرْتَ الوَاهِبَ، وَبَلَغَ أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ
+                    </div>
+                    <p class="prayer-translation font-cormorant text-center">
+                        "Semoga Allah memberkahimu dalam anak yang diberikan kepadamu, kamu pun bersyukur kepada Sang Pemberi, dan dia dapat mencapai masa dewasanya, serta kamu dikaruniai kebaikannya."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. KIRIM GIFT (HADIAH) -->
+        <section class="section gift-sec">
+            <div class="container">
+                <div class="premium-card text-center scroll-reveal fade-up">
+                    <div class="card-icon"><i class="fa-solid fa-gift text-primary"></i></div>
+                    <h2 class="section-title font-cormorant text-center">Kirim Hadiah</h2>
+                    <p class="text-center" style="margin-bottom: 30px;">Bagi keluarga yang ingin mengirimkan kado digital dapat melalui rekening berikut:</p>
+                    
+                    <div class="bank-card">
+                        <h4 class="font-playfair">Bank Syariah Indonesia (BSI)</h4>
+                        <div class="acc-number font-playfair" id="num-rek-1">1051707415</div>
+                        <p class="acc-name font-cormorant">a.n. Zulian Syahputra</p>
+                        <button class="btn-copy" onclick="copyToClipboard('1051707415')"><i class="fa-regular fa-copy" style="margin-right: 6px;"></i> Salin Rekening</button>
+                    </div>
+
+                    <div class="bank-card">
+                        <h4 class="font-playfair">Bank Syariah Indonesia (BSI)</h4>
+                        <div class="acc-number font-playfair" id="num-rek-2">7229681464</div>
+                        <p class="acc-name font-cormorant">a.n. Nanda Rizki Pradana</p>
+                        <button class="btn-copy" onclick="copyToClipboard('7229681464')"><i class="fa-regular fa-copy" style="margin-right: 6px;"></i> Salin Rekening</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. BUKU TAMU / RSVP -->
+        <section class="section rsvp-sec">
+            <div class="container">
+                <div class="premium-card scroll-reveal fade-up">
+                    <div class="card-icon"><i class="fa-regular fa-pen-to-square text-primary"></i></div>
+                    <h2 class="section-title font-cormorant text-center">Buku Tamu & Ucapan Doa</h2>
+                    
+                    <form id="rsvp-form">
+                        <div class="form-group">
+                            <label for="rsvp-name" class="font-cormorant">Nama Anda</label>
+                            <input type="text" id="rsvp-name" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rsvp-status" class="font-cormorant">Konfirmasi Kehadiran</label>
+                            <select id="rsvp-status" required>
+                                <option value="" disabled selected>-- Pilih Kehadiran --</option>
+                                <option value="Hadir">Hadir</option>
+                                <option value="Tidak Hadir">Tidak Hadir</option>
+                                <option value="Masih Ragu">Masih Ragu</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="rsvp-message" class="font-cormorant">Ucapan / Doa Restu</label>
+                            <textarea id="rsvp-message" rows="4" placeholder="Tulis doa atau ucapan selamat..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary ripple-btn" style="width: 100%; margin-top: 10px;">
+                            <span><i class="fa-regular fa-paper-plane" style="margin-right: 8px;"></i> Kirim Ucapan</span>
+                        </button>
+                    </form>
+
+                    <!-- Tempat List Ucapan Tersimpan -->
+                    <div id="wishes-display" class="wishes-box">
+                        <!-- Data dimuat dinamis oleh JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. PENUTUP -->
+        <section class="section footer-sec text-center">
+            <div class="container scroll-reveal fade-up">
+                <hr class="footer-divider">
+                <p class="text-center">Merupakan suatu kehormalan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu bagi buah hati kami.</p>
+                <p class="font-cormorant italic-p text-center" style="font-size: 1.35rem; margin: 24px 0;">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+                
+                <div class="footer-signature">
+                    <p class="caption-text text-center">Kami Yang Berbahagia,</p>
+                    <h4 class="font-playfair text-primary text-center">Zulian Syahputra, S.H., M.H.</h4>
+                    <h4 class="font-playfair text-primary text-center">& Nanda Rizki Pradana, S.Gz.</h4>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FLOATING AUDIO MUSIC BUTTON -->
+    <button id="floating-music-btn" class="music-control-btn hidden">
+        <span id="music-icon"><i class="fa-solid fa-music"></i></span>
+    </button>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="btt-btn"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- CONFETTI CANVAS EFFECT -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
