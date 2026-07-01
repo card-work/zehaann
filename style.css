@@ -23,7 +23,6 @@
 
 body {
     background-color: var(--bg-main);
-    /* Soft Subtle Watercolor/Granular Texture Overlay Style */
     background-image: 
         radial-gradient(rgba(166, 124, 82, 0.03) 1px, transparent 0),
         radial-gradient(rgba(166, 124, 82, 0.02) 2px, transparent 0);
@@ -62,7 +61,6 @@ p {
     margin-bottom: 16px;
 }
 
-/* Strict Global Alignment */
 .text-center { 
     text-align: center !important; 
 }
@@ -106,85 +104,108 @@ p {
 }
 
 /* ==========================================================================
-   KUSTOMISASI KHUSUS DESAIN CARD DEPAN: ARCH COKLAT MUDA PASTEL SOFT (MURNI CSS)
+   KUSTOMISASI KHUSUS DESAIN CARD DEPAN: PHOTO BACKGROUND WITH LUXURY OVERLAY
    ========================================================================== */
-.premium-arch-card-cover {
-    background: #EEDCC6; /* Cokelat muda pastel yang sangat lembut dan soft */
+.premium-photo-card-cover {
+    position: relative;
+    background: url("foto.jpeg") no-repeat center center;
+    background-size: cover;
     border: 4px solid #FDFBF9; 
     border-radius: 300px 300px 40px 40px;
-    padding: 60px 30px 45px 30px;
+    padding: 80px 30px 55px 30px;
     margin: auto;
     width: 90%;
     max-width: 440px;
-    position: relative;
-    box-shadow: 0 25px 60px rgba(92, 64, 51, 0.15);
-    overflow: visible;
+    min-height: 590px;
+    box-shadow: 0 25px 60px rgba(92, 64, 51, 0.2);
+    overflow: hidden;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay Putih Transparan (Kombinasi Gradasi Lembut 35% - 55%) */
+.card-cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0.55) 100%
+    );
+    z-index: 1;
 }
 
 .cover-content-arch {
     position: relative;
-    z-index: 10;
-}
-.premium-arch-card-cover .cover-subtitle { letter-spacing: 5px; font-size: 0.75rem; color: var(--primary); font-weight: 600; margin-bottom: 10px; text-transform: uppercase;}
-.premium-arch-card-cover .baby-name-title { font-size: 2.2rem; color: #3E271C; margin: 10px 0 15px 0; font-weight: 600; line-height: 1.3;}
-.premium-arch-card-cover .event-tag { font-size: 1.5rem; margin-bottom: 25px; color: var(--text-color); }
-.premium-arch-card-cover .guest-spec { font-size: 0.85rem; color: #6E5446; margin-top: 20px; letter-spacing: 0.5px;}
-.premium-arch-card-cover .guest-name { font-size: 1.35rem; font-weight: 600; margin: 4px 0 30px 0; color: #321E14; }
-
-.premium-arch-card-cover #btn-open-invite {
+    z-index: 2;
     width: 100%;
-    padding: 15px;
+}
+
+.premium-photo-card-cover .cover-subtitle { 
+    letter-spacing: 5px; 
+    font-size: 0.8rem; 
+    color: #4A3226; 
+    font-weight: 600; 
+    margin-bottom: 12px; 
+    text-transform: uppercase;
+}
+
+.premium-photo-card-cover .baby-name-title { 
+    font-size: 2.3rem; 
+    color: #26140A; 
+    margin: 10px 0 15px 0; 
+    font-weight: 600; 
+    line-height: 1.3;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.premium-photo-card-cover .event-tag { 
+    font-size: 1.45rem; 
+    margin-bottom: 35px; 
+    color: #5C4033; 
+    font-weight: 500;
+}
+
+.premium-photo-card-cover .guest-spec { 
+    font-size: 0.85rem; 
+    color: #5C4033; 
+    margin-top: 30px; 
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.premium-photo-card-cover .guest-name { 
+    font-size: 1.4rem; 
+    font-weight: 600; 
+    margin: 6px 0 35px 0; 
+    color: #1A0D05; 
+}
+
+.premium-photo-card-cover #btn-open-invite {
+    width: 100%;
+    padding: 16px;
     font-size: 0.95rem;
     background: #321E14; 
     color: #FDFBF9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    box-shadow: 0 8px 20px rgba(50, 30, 20, 0.25);
 }
-.premium-arch-card-cover #btn-open-invite:hover {
+
+.premium-photo-card-cover #btn-open-invite:hover {
     background: #4A3226;
-    box-shadow: 0 10px 25px rgba(50, 30, 20, 0.3);
+    box-shadow: 0 10px 25px rgba(50, 30, 20, 0.4);
+    transform: translateY(-2px);
 }
-
-/* PURE CSS ART VECTOR INTERNAL: BERUANG DAN BALON */
-.css-illustration-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -110px;
-    margin-bottom: 20px;
-    position: relative;
-    height: 190px;
-}
-.css-balloon-group { position: absolute; top: 0; width: 140px; height: 90px; }
-.css-b-balloon { position: absolute; border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; box-shadow: inset -5px -5px 10px rgba(0,0,0,0.05); }
-.cb1 { width: 45px; height: 52px; background: #FFFDFB; top: 10px; left: 10px; transform: rotate(-15deg); opacity: 0.95;}
-.cb2 { width: 42px; height: 50px; background: #F2E6D8; top: 0px; left: 45px; z-index: 2; }
-.cb3 { width: 48px; height: 55px; background: #FFF; top: 15px; right: 10px; transform: rotate(15deg); }
-.cb4 { width: 38px; height: 45px; background: #DCC7B3; top: 30px; left: 30px; opacity: 0.9; }
-.cb5 { width: 40px; height: 48px; background: #E8D8C8; top: 32px; right: 35px; opacity: 0.9; }
-
-.css-bear { position: absolute; bottom: 0; width: 100px; height: 90px; z-index: 5; animation: gentleNod 4s ease-in-out infinite; }
-.bear-head { width: 76px; height: 64px; background: #D7C0A7; border-radius: 50% 50% 46% 46%; position: absolute; top: 10px; left: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.bear-ear { width: 24px; height: 24px; background: #D7C0A7; border-radius: 50%; position: absolute; }
-.bear-ear::after { content: ''; position: absolute; width: 14px; height: 14px; background: #E8D8C8; border-radius: 50%; top: 5px; left: 5px; }
-.bear-ear.left { top: 2px; left: 6px; }
-.bear-ear.right { top: 2px; right: 6px; }
-.bear-eye { width: 7px; height: 7px; background: #4A3226; border-radius: 50%; position: absolute; top: 26px; }
-.bear-eye.left { left: 22px; }
-.bear-eye.right { right: 22px; }
-.bear-muzzle { width: 32px; height: 24px; background: #F8F4EE; border-radius: 50%; position: absolute; bottom: 8px; left: 22px; }
-.bear-nose { width: 12px; height: 8px; background: #4A3226; border-radius: 6px 6px 50% 50%; position: absolute; top: 4px; left: 10px; }
-.bear-body { width: 64px; height: 30px; background: #CBB296; border-radius: 50% 50% 0 0; position: absolute; bottom: -12px; left: 18px; z-index: -1; }
-
-.css-hot-air { position: absolute; bottom: -25px; display: flex; flex-direction: column; align-items: center; z-index: 15; animation: gentleFloat 5s ease-in-out infinite alternate; }
-.left-corner { left: -30px; }
-.right-corner { right: -30px; animation-delay: 1.5s; }
-.balloon-sphere { width: 70px; height: 76px; background: radial-gradient(circle at 30% 30%, #FFFDFB 0%, #E8D8C8 80%); border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%; box-shadow: 0 8px 20px rgba(92, 64, 51, 0.15); position: relative; }
-.balloon-sphere::after { content: ''; position: absolute; width: 30px; height: 100%; background: rgba(255, 255, 255, 0.25); left: 20px; border-radius: 50%; }
-.basket-box { width: 20px; height: 15px; background: #A67C52; border-radius: 3px; margin-top: 8px; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-.basket-box::before { content: ''; position: absolute; top: -8px; left: 3px; right: 3px; height: 8px; border-left: 1px dashed #4A3226; border-right: 1px dashed #4A3226; opacity: 0.6; }
 
 /* ==========================================================================
-   SECTIONS STRUCTURE WITH DELIBERATE WHITESPACE (ASLI SEBELUM REVISI GAMBAR)
+   SECTIONS STRUCTURE WITH DELIBERATE WHITESPACE
    ========================================================================== */
 .section { 
     padding: 110px 0; 
@@ -357,7 +378,7 @@ p {
     color: var(--text-color);
 }
 
-/* PREMIUM BUTTONS WITH CLEAN HOVER TRANSITION */
+/* PREMIUM BUTTONS */
 .btn-primary {
     background: var(--primary);
     color: var(--white);
@@ -381,7 +402,7 @@ p {
     transform: translateY(-2px);
 }
 
-/* 6. GALLERY SLIDER Premium Refinement */
+/* 6. GALLERY SLIDER */
 .slider-viewport { 
     position: relative; 
     max-width: 100%; 
@@ -392,17 +413,6 @@ p {
 }
 .slider-track { display: flex; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
 .slide-item { min-width: 100%; padding: 0; }
-.img-placeholder { 
-    height: 400px; 
-    background: linear-gradient(135deg, #FFFDFB 0%, #F5EFEB 100%); 
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    font-size: 1.1rem; 
-    color: var(--secondary); 
-    font-weight: 400; 
-}
 .slide-nav { 
     position: absolute; 
     top: 50%; 
@@ -430,6 +440,14 @@ p {
 .slide-nav.prev { left: 16px; }
 .slide-nav.next { right: 16px; }
 
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover; 
+    display: block;
+    border-radius: 24px; 
+}
+
 /* 7. PRAYER SECTION */
 .prayer-translation {
     font-size: 1.3rem;
@@ -437,7 +455,7 @@ p {
     color: var(--text-color);
 }
 
-/* 8. BANK CARD HADIAH Premium Look */
+/* 8. BANK CARD HADIAH */
 .bank-card { 
     background: rgba(248, 244, 238, 0.5); 
     border: 1px solid rgba(166, 124, 82, 0.15); 
@@ -484,7 +502,7 @@ p {
     box-shadow: 0 5px 15px rgba(166, 124, 82, 0.2);
 }
 
-/* 9. BUKU TAMU & RSVP FORM Premium Upgrade */
+/* 9. BUKU TAMU & RSVP FORM */
 .form-group { text-align: left; margin-bottom: 24px; }
 .form-group label { 
     display: block; 
@@ -529,7 +547,7 @@ p {
 .wish-header { display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: var(--primary); margin-bottom: 8px; }
 .wish-badge { font-size: 0.75rem; padding: 4px 12px; background: rgba(199, 162, 124, 0.15); color: var(--primary); border-radius: 30px; }
 
-/* TOAST LUXE */
+/* TOAST */
 .toast { 
     position: fixed; 
     bottom: 40px; 
@@ -549,7 +567,7 @@ p {
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* CONTROLS (AUDIO & BTT) Premium Rounding */
+/* CONTROLS (AUDIO & BTT) */
 .music-control-btn, .btt-btn { 
     position: fixed; 
     right: 24px; 
@@ -599,7 +617,7 @@ p {
 /* SCROLL BAR PROGRESS */
 #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: var(--primary); width: 0%; z-index: 9999; }
 
-/* FLOATING DECORATIONS (Premium Soft Micro-Animations) */
+/* FLOATING DECORATIONS */
 .floating-decorations { position: fixed; inset: 0; pointer-events: none; z-index: 100; overflow: hidden; }
 .float-cloud { position: absolute; opacity: 0.08; font-size: 3rem; color: var(--secondary); animation: floatHor 35s linear infinite; }
 .c1 { top: 12%; left: -10%; }
@@ -613,10 +631,8 @@ p {
 @keyframes floatHor { 0% { left: -15%; } 100% { left: 115%; } }
 @keyframes floatVert { 0% { bottom: -15%; transform: translateX(0); } 50% { transform: translateX(30px); } 100% { bottom: 115%; } }
 @keyframes floatHorizontal { 0% { transform: translateX(-150px); } 100% { transform: translateX(calc(100vw + 150px)); } }
-@keyframes gentleNod { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(3px) rotate(1deg); } }
-@keyframes gentleFloat { 0% { transform: translateY(0) scale(1); } 100% { transform: translateY(-10px) scale(1.02); } }
 
-/* SCROLL REVEAL MECHANISM Smooth */
+/* SCROLL REVEAL MECHANISM */
 .scroll-reveal { opacity: 0; transition: all 1.2s cubic-bezier(0.215, 0.610, 0.355, 1); }
 .scroll-reveal.fade-up { transform: translateY(35px); }
 .scroll-reveal.active { opacity: 1; transform: translateY(0); }
@@ -645,32 +661,20 @@ p {
     .main-baby-name { font-size: 2.2rem; }
     .schedule-grid { grid-template-columns: 1fr; gap: 16px; }
     .schedule-item.full-width { grid-column: span 1; }
-    .img-placeholder { height: 280px; }
     #countdown-wrapper { gap: 12px; }
     .countdown-card { width: 74px; padding: 16px 5px; }
     .countdown-card span { font-size: 1.6rem; }
     .acc-number { font-size: 1.35rem; }
+    .gallery-img { aspect-ratio: 1/1; }
     
     /* Responsive Penyesuaian Arch Cover */
-    .premium-arch-card-cover { border-radius: 220px 220px 30px 30px; width: 92%; padding: 50px 16px 35px 16px; }
-    .css-illustration-top { margin-top: -95px; transform: scale(0.85); }
-    .css-hot-air { transform: scale(0.75); bottom: -20px; }
-    .left-corner { left: -20px; }
-    .right-corner { right: -20px; }
-}
-
-/* Styling Tambahan untuk Foto Galeri Real */
-.gallery-img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover; /* Memastikan foto proporsional dan tidak gepeng */
-    display: block;
-    border-radius: 24px; /* Sudut melengkung halus yang mewah */
-}
-
-@media (max-width: 576px) {
-    .gallery-img {
-        aspect-ratio: 1/1; /* Tinggi foto saat dibuka di layar HP */
+    .premium-photo-card-cover { 
+        border-radius: 220px 220px 30px 30px; 
+        width: 92%; 
+        padding: 60px 20px 45px 20px; 
+        min-height: 520px;
     }
+    .premium-photo-card-cover .baby-name-title { font-size: 2rem; }
+    .premium-photo-card-cover .event-tag { font-size: 1.3rem; margin-bottom: 20px; }
+    .premium-photo-card-cover .guest-name { font-size: 1.25rem; margin-bottom: 25px; }
 }
-
