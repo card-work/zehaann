@@ -51,36 +51,16 @@
     <!-- TOAST NOTIFICATION -->
     <div id="toast" class="toast font-cormorant">Nomor rekening berhasil disalin!</div>
 
-    <!-- 1. COVER / SPLASH SCREEN (Hanya Desain Card Berubah Menjadi Arch Kubah Cokelat Muda Soft) -->
+    <!-- 1. COVER / SPLASH SCREEN (UPDATED: PHOTO BACKGROUND COVER) -->
     <div id="cover-overlay">
         
-        <!-- Bingkai Lengkung Kubah Premium (Arch Card) Murni CSS -->
-        <div class="premium-arch-card-cover">
+        <!-- Card Depan Menggunakan Background Foto Penuh -->
+        <div class="premium-photo-card-cover">
             
-            <!-- PURE CSS ART: BERUANG & BALON ATAS -->
-            <div class="css-illustration-top">
-                <div class="css-balloon-group">
-                    <div class="css-b-balloon cb1"></div>
-                    <div class="css-b-balloon cb2"></div>
-                    <div class="css-b-balloon cb3"></div>
-                    <div class="css-b-balloon cb4"></div>
-                    <div class="css-b-balloon cb5"></div>
-                </div>
-                <div class="css-bear">
-                    <div class="bear-ear left"></div>
-                    <div class="bear-ear right"></div>
-                    <div class="bear-head">
-                        <div class="bear-eye left"></div>
-                        <div class="bear-eye right"></div>
-                        <div class="bear-muzzle">
-                            <div class="bear-nose"></div>
-                        </div>
-                    </div>
-                    <div class="bear-body"></div>
-                </div>
-            </div>
+            <!-- Overlay Transparan Agar Tulisan Terbaca Jelas -->
+            <div class="card-cover-overlay"></div>
 
-            <!-- ISI KONTEN TEKS DAN DATA ASLI TETAP KODE AWAL -->
+            <!-- Isi Konten Teks Tetap Utuh -->
             <div class="cover-content-arch">
                 <p class="cover-subtitle">Tasyakuran Aqiqah</p>
                 <h1 class="baby-name-title font-playfair">Zehaan Raffasya Zulda</h1>
@@ -93,17 +73,7 @@
                 </button>
             </div>
 
-            <!-- PURE CSS ART: BALON UDARA POJOK BAWAH -->
-            <div class="css-hot-air left-corner">
-                <div class="balloon-sphere"></div>
-                <div class="basket-box"></div>
-            </div>
-            <div class="css-hot-air right-corner">
-                <div class="balloon-sphere"></div>
-                <div class="basket-box"></div>
-            </div>
-
-        </div> <!-- /premium-arch-card-cover -->
+        </div> <!-- /premium-photo-card-cover -->
 
     </div>
 
@@ -194,7 +164,6 @@
                 <div class="slider-viewport scroll-reveal fade-up">
                     <div class="slider-track" id="slider-track">
                         
-                        <!-- Ganti Jalur src sesuai dengan nama file foto yang Anda upload -->
                         <div class="slide-item"><img src="assets/pictures/1.jpeg" alt="Foto Zehaan 1" class="gallery-img"></div>
                         <div class="slide-item"><img src="assets/pictures/2.jpeg" alt="Foto Zehaan 2" class="gallery-img"></div>
                         <div class="slide-item"><img src="assets/pictures/3.jpeg" alt="Foto Zehaan 3" class="gallery-img"></div>
@@ -214,7 +183,7 @@
             <div class="container">
                 <div class="premium-card scroll-reveal fade-up card-glass">
                     <div class="arabic-text font-amiri" style="font-size: 1.8rem; line-height: 2.8rem; margin-bottom: 24px;">
-                        بَارَكَ اللهُ لَكَ فِي المَوْهُوبِ لَكَ، وَشَكَرْتَ الوَاهِبَ، وَبَلَغَ أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ
+                        بَارَكَ اللهُ لَكَ فِي Mَوْهُوبِ لَكَ، وَشَكَرْتَ الوَاهِبَ، وَبَلَغَ أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ
                     </div>
                     <p class="prayer-translation font-cormorant text-center">
                         "Semoga Allah memberkahimu dalam anak yang diberikan kepadamu, kamu pun bersyukur kepada Sang Pemberi, dan dia dapat mencapai masa dewasanya, serta kamu dikaruniai kebaikannya."
@@ -278,7 +247,6 @@
                         </button>
                     </form>
 
-                    <!-- Tempat List Ucapan Tersimpan -->
                     <div id="wishes-display" class="wishes-box">
                         <!-- Data dimuat dinamis oleh JS -->
                     </div>
