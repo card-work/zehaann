@@ -108,7 +108,7 @@ p {
    ========================================================================== */
 .premium-photo-card-cover {
     position: relative;
-    background: url("foto.jpeg") no-repeat center center;
+    background: url("assets/pictures/foto.jpeg") no-repeat center center;
     background-size: cover;
     border: 4px solid #FDFBF9; 
     border-radius: 300px 300px 40px 40px;
