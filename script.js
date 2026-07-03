@@ -142,43 +142,87 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 7. LOCAL STORAGE GUESTBOOK SYSTEM (RSVP)
+    // 7. GOOGLE SHEETS GUESTBOOK SYSTEM (RSVP) - LINK TERINTEGRASI
     const rsvpForm = document.getElementById('rsvp-form');
     const wishesDisplay = document.getElementById('wishes-display');
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz8sOjWvkiFEsSAslqxdSewVZpUbofiSftEuWWfZRWbmgSsEbGZCIk_AY6q0Pvi511b/exec'; 
 
+    // Fungsi mengambil semua doa dari Google Sheets secara publik
     const renderWishes = () => {
-        const storedWishes = JSON.parse(localStorage.getItem('wishes_data')) || [];
-        wishesDisplay.innerHTML = storedWishes.map(item => `
-            <div class="wish-item">
-                <div class="wish-header">
-                    <span class="font-playfair">${escapeHtml(item.name)}</span>
-                    <span class="wish-badge font-cormorant">${item.status}</span>
-                </div>
-                <p style="margin-top:8px; color:#5C4033; font-weight: 300;">${escapeHtml(item.message)}</p>
-            </div>
-        `).reverse().join('');
+        wishesDisplay.innerHTML = '<p class="font-cormorant text-center" style="color:#A67C52; padding: 20px 0;">Memuat ucapan doa...</p>';
+        
+        fetch(scriptUrl)
+            .then(response => response.json())
+            .then(storedWishes => {
+                if(storedWishes.length === 0) {
+                    wishesDisplay.innerHTML = '<p class="font-cormorant text-center" style="color:#5C4033; opacity:0.7; padding: 20px 0;">Belum ada ucapan doa.</p>';
+                    return;
+                }
+                wishesDisplay.innerHTML = storedWishes.map(item => `
+                    <div class="wish-item">
+                        <div class="wish-header">
+                            <span class="font-playfair">${escapeHtml(item.name)}</span>
+                            <span class="wish-badge font-cormorant">${item.status}</span>
+                        </div>
+                        <p style="margin-top:8px; color:#5C4033; font-weight: 300;">${escapeHtml(item.message)}</p>
+                    </div>
+                `).reverse().join(''); // Urutan dibalik agar ucapan paling baru muncul paling atas
+            })
+            .catch(err => {
+                console.error("Gagal memuat ucapan:", err);
+                wishesDisplay.innerHTML = '<p class="font-cormorant text-center" style="color:red; padding: 20px 0;">Gagal memuat ucapan doa.</p>';
+            });
     };
 
+    // Fungsi mengirim data ke Google Sheets saat form disubmit
     rsvpForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        
+        const submitBtn = rsvpForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        // Animasi loading tombol kirim
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span><i class="fa-solid fa-spinner fa-spin"></i> Mengirim...</span>';
+
         const name = document.getElementById('rsvp-name').value;
         const status = document.getElementById('rsvp-status').value;
         const message = document.getElementById('rsvp-message').value;
 
-        const storedWishes = JSON.parse(localStorage.getItem('wishes_data')) || [];
-        storedWishes.push({ name, status, message });
-        localStorage.setItem('wishes_data', JSON.stringify(storedWishes));
+        const dataToSend = { name, status, message };
 
-        rsvpForm.reset();
-        renderWishes();
-        showToast('Ucapan berhasil dikirim!');
+        fetch(scriptUrl, {
+            method: 'POST',
+            mode: 'no-cors', // Mencegah kendala CORS lintas platform mobile browser
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dataToSend)
+        })
+        .then(() => {
+            showToast('Ucapan berhasil dikirim!');
+            rsvpForm.reset();
+            
+            // Memberikan sedikit jeda untuk server Google memproses sebelum web memuat ulang datanya
+            setTimeout(() => {
+                renderWishes();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }, 1500);
+        })
+        .catch(err => {
+            console.error('Gagal mengirim:', err);
+            showToast('Gagal mengirim ucapan!');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        });
     });
 
     function escapeHtml(str) {
         return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
 
-    renderWishes(); // Initial display load
+    renderWishes(); // Memuat daftar ucapan pertama kali saat undangan dibuka
 });
 
 // 8. CLIPBOARD SCRIPT WITH TOAST
